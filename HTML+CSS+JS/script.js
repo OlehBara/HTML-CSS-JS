@@ -1,4 +1,4 @@
- // Кукі функції (дуже просто)
+ // Кукі функції 
 function setCookie(name, value) {
     document.cookie = name + "=" + value;
 }
@@ -18,9 +18,8 @@ function getCookie(name) {
 }
 
 
-// Код після завантаження
+// Кукі-бар
 window.onload = function () {
-    // Кукі-бар
     let bar = document.querySelector("#cookie-bar");
     if (getCookie("cookie_accepted") != "true") {
         bar.style.display = "flex";
@@ -70,8 +69,8 @@ window.onload = function () {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 }
         }
-    });
-
+    })
+ 
     // Анімації
     AOS.init({
         duration: 1000,
@@ -102,7 +101,7 @@ window.onload = function () {
             appeared = true;
         }
         lastY = nowY;
-    };
+    }
 
     up.onclick = function () {
         window.scrollTo(0, 0);
@@ -117,10 +116,10 @@ window.onload = function () {
 
     open1.onclick = function () {
         modal.style.display = "flex";
-    };
+    }
     open2.onclick = function () {
         modal.style.display = "flex";
-    };
+    }
 
     close.onclick = function () {
         modal.style.display = "none";
@@ -130,7 +129,7 @@ window.onload = function () {
         n.style.border = "";
         e.style.border = "";
         p.style.border = "";
-    };
+    }
 
     modal.onclick = function (e) {
         if (e.target == modal) {
@@ -187,8 +186,8 @@ window.onload = function () {
             alert("Форма відправлена");
             modal.style.display = "none";
             n.value = "";
-            e.value = "";
-            p.value = "";
+            e.value = ""
+            p.value = ""
         }
     }
 
@@ -200,27 +199,27 @@ window.onload = function () {
         body.className = "dark-theme";
         themeBtn.innerHTML = "Світла тема";
     } else {
-        themeBtn.innerHTML = "Темна тема";
+        themeBtn.innerHTML = "Темна тема"
     }
 
     themeBtn.onclick = function () {
         if (body.className == "dark-theme") {
-            body.className = "";
+            body.className = ""
             themeBtn.innerHTML = "Темна тема";
-            setCookie("theme", "light");
+            setCookie("theme", "light")
         } else {
             body.className = "dark-theme";
             themeBtn.innerHTML = "Світла тема";
-            setCookie("theme", "dark");
+            setCookie("theme", "dark")
         }
-    };
+    }
 
     // Таймер
-    let end = new Date().getTime() + 7 * 24 * 60 * 60 * 1000; // 7 днів
+    let end = new Date().getTime() + 7 * 24 * 60 * 60 * 1000 
 
     setInterval(function () {
         let now = new Date().getTime();
-        let left = end - now;
+        let left = end - now
 
         let d = Math.floor(left / (1000 * 60 * 60 * 24));
         let h = Math.floor((left % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -230,28 +229,28 @@ window.onload = function () {
         if (left < 0) {
             d = 0;
             h = 0;
-            m = 0;
+            m = 0
             s = 0;
-            document.querySelector("#countdown-timer").innerHTML = "Курс розпочався!";
+            document.querySelector("#countdown-timer").innerHTML = "Курс розпочався!"
         }
 
         if (d < 10) {
-            d = "0" + d;
+            d = "0" + d
         }
         if (h < 10) {
-            h = "0" + h;
+            h = "0" + h
         }
         if (m < 10) {
-            m = "0" + m;
+            m = "0" + m
         }
         if (s < 10) {
-            s = "0" + s;
+            s = "0" + s
         }
 
 
         document.querySelector("#days").innerHTML = d;
         document.querySelector("#hours").innerHTML = h;
-        document.querySelector("#minutes").innerHTML = m;
-        document.querySelector("#seconds").innerHTML = s;
-    }, 1000);
+        document.querySelector("#minutes").innerHTML = m
+        document.querySelector("#seconds").innerHTML = s
+    }, 1000)
 }
