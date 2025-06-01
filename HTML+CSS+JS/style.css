@@ -738,18 +738,18 @@ body.dark-theme .modal-close {
 .countdown-timer {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Збільшено відступ між елементами для кращого вирівнювання */
+    gap: 2rem; 
     font-size: 1.5rem;
-    align-items: center; /* Вирівнювання по вертикалі */
+    align-items: center; 
 }
 
 .countdown-timer span {
     background-color: #e0e0e0;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    min-width: 50px; /* Фіксована мінімальна ширина для рівності */
-    text-align: center; /* Центрування тексту всередині */
-    display: inline-block; /* Забезпечує правильне відображення ширини */
+    min-width: 50px;
+    text-align: center; 
+    display: inline-block; 
 }
 
 body.dark-theme .countdown-timer span {
@@ -854,11 +854,11 @@ body.dark-theme .countdown-timer span {
     .countdown-timer {
         font-size: 1rem;
         flex-wrap: wrap;
-        gap: 1rem; /* Зменшено gap для малих екранів */
+        gap: 1rem; 
     }
 
     .countdown-timer span {
-        min-width: 40px; /* Зменшено ширину для малих екранів */
+        min-width: 40px; 
     }
 }
 
